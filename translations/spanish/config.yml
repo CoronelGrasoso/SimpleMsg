@@ -1,0 +1,7 @@
+Config:
+    prefix: "&c&lSimple&e&lMsg"
+    
+    cant-execute-commands-at-console: "&cNo puedes ejecutar comandos en la consola!"
+    
+    msg-command-usage: "&e&lUso: &c&l'/msg <jugador> <mensaje>'"
+    
