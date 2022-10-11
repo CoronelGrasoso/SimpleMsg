@@ -6,19 +6,21 @@ import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import me.shrek820.simplemsg.commands.MsgCommand;
+
 public class SimpleMsg extends JavaPlugin{
-	
-	Utils utils = new Utils();
 	
 	String pathConfig;
 	
-	String name = ChatColor.AQUA + "[" + utils.color(this.getConfig().getString("Config.prefix")) + ChatColor.AQUA + "]";
+	public String name = ChatColor.AQUA + "[" + Utils.color(this.getConfig().getString("Config.prefix")) + ChatColor.AQUA + "]";
 	
 	public void onEnable() {
 		
 		Bukkit.getConsoleSender().sendMessage(name + ChatColor.WHITE + " Plugin activated");
 		
 		registerConfig();
+		
+		registerCommands();
 		
 	}
 	
@@ -40,6 +42,12 @@ public class SimpleMsg extends JavaPlugin{
 			saveConfig();
 			
 		}
+		
+	}
+	
+	public void registerCommands() {
+		
+		this.getCommand("msg").setExecutor(new MsgCommand(this));
 		
 	}
 	
