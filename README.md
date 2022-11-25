@@ -1,2 +1,2 @@
 # SimpleMsg
-SimpleMsg plugin that you can find in SpigotMC
+**SimpleMsg** plugin that you can find in SpigotMC
